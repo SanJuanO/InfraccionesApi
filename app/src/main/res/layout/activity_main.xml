@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00F7F3F3"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rela"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/tituloma"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif"
+
+            android:freezesText="true"
+            android:gravity="center"
+            android:lines="1"
+            android:background="@color/ABLUE"
+
+            android:text="      Infracciónes"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            tools:ignore="RtlCompat" />
+
+
+        <Button
+            android:id="@+id/listablu"
+            style="@style/custom_btn_orange"
+            android:drawableTint="@color/ABLUE"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="30dp"
+            android:textSize="8dp"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:drawableStart="@android:drawable/stat_sys_data_bluetooth"
+            android:text="Dispositivos sincornizados"
+            android:drawableLeft="@android:drawable/stat_sys_data_bluetooth" />
+
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_behavior="TEXTO"
+        app:layout_constraintBottom_toTopOf="@+id/navigationViewinicio"
+        app:layout_constraintTop_toBottomOf="@id/rela"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationViewinicio"
+        android:layout_width="match_parent"
+        android:foregroundTint="@color/ABLUE"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemIconTint="@color/ABLUE"
+        app:itemTextColor="@color/ABLUE"
+        android:fontFamily="sans-serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
